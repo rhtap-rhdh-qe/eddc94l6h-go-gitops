@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: eddc94l6h-go-gitops
+  description: This is GitOps manifest for eddc94l6h-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: eddc94l6h-go
+    backstage.io/kubernetes-id: eddc94l6h-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: eddc94l6h-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:eddc94l6h-go
